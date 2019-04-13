@@ -1,6 +1,8 @@
 
-<ul>
+<table>
 {% for art_change in site.data.art_change %}
-  <li>{{ art_change.title }}: {{ art_change.roomTitle }}</li>
+  <tr>
+    <td>{{ art_change.title }}</td><td>{{ art_change.roomTitle }}</td>
+  </tr>
 {% endfor %}
-</ul>
+</table>
