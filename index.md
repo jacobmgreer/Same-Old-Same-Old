@@ -4,4 +4,4 @@
     <td>{{ art_change.title }}</td>
   </tr>
 {% endfor %}
-</div>
+</table>
