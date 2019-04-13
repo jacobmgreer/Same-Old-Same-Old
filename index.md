@@ -1,7 +1,6 @@
-<table>
+
 	{% for art_change in site._data.art_change %}
-	  <tr>
-	      <td>{{ art_change.title }}</td>
-	  </tr>
+	  {{ art_change.id }}
+	  {{ art_change.title }}
+	  {{ art_change.attribution }}
 	{% endfor %}
-</table>
