@@ -3,13 +3,23 @@ title: Same Old Same Old
 layout: default
 ---
 
-<table>
-{% for art_change in site.data.art_change %}
-  <tr>
-  	<td height="100"><img src="{{ art_change.imagepath }}" width="50"/></td>
-    <td><a href="https://www.nga.gov{{ art_change.url }}">{{ art_change.title }}</a></td>
-    <td>{{ art_change.roomTitle }}</td>
-    <td>{{ art_change.Status }}</td>
-  </tr>
-{% endfor %}
+<table class="table">
+	<thead>
+	    <tr>
+	      <th scope="col">Image</th>
+	      <th scope="col">Artwork Title</th>
+	      <th scope="col">Location</th>
+	      <th scope="col">Changed Status</th>
+	    </tr>
+  	</thead>
+  	<tbody>
+		{% for art_change in site.data.art_change %}
+		  <tr>
+		  	<td height="100"><img src="{{ art_change.imagepath }}" width="50"/></td>
+		    <td><a href="https://www.nga.gov{{ art_change.url }}">{{ art_change.title }}</a></td>
+		    <td>{{ art_change.roomTitle }}</td>
+		    <td>{{ art_change.Status }}</td>
+		  </tr>
+		{% endfor %}
+	</tbody>
 </table>
