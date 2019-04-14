@@ -1,6 +1,7 @@
-<style>
-td {font-size:11px;}
-</style>
+---
+title: Same Old Same Old
+layout: post
+---
 
 <table>
 {% for art_change in site.data.art_change %}
