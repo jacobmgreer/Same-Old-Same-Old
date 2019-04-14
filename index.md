@@ -1,6 +1,6 @@
 ---
 title: Same Old Same Old
-layout: post
+layout: default
 ---
 
 <table>
