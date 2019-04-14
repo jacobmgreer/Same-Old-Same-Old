@@ -10,7 +10,7 @@ layout: default
 	      <th scope="col">Artwork Title</th>
 	      <th scope="col">Attribution</th>
 	      <th scope="col">Location</th>
-	      <th scope="col">Changed Status</th>
+	      <th scope="col">Update</th>
 	    </tr>
   	</thead>
   	<tbody>
