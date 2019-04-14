@@ -16,7 +16,7 @@ layout: default
   	<tbody>
 		{% for art_change in site.data.art_change %}
 		  <tr>
-		  	<td height="100"><img src="{{ art_change.imagepath }}" width="50"/></td>
+		  	<td height="100"><img src="{{ art_change.imagepath }}" width="50" style="display: none" onload="this.style.display=''"/></td>
 		    <td><a href="https://www.nga.gov{{ art_change.url }}">{{ art_change.title }}</a></td>
 		    <td>{{ art_change.attribution }}</td>
 		    <td>{{ art_change.roomTitle }}</td>
