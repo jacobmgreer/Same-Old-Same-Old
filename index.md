@@ -11,7 +11,7 @@ layout: default
 	      <th scope="col">Attribution</th>
 	      <th scope="col">Location</th>
 	      <th scope="col">Update</th>
-	      <th scope="col">Date</th>
+	      <th scope="col">Date Changed</th>
 	    </tr>
   	</thead>
   	<tbody>
@@ -22,7 +22,7 @@ layout: default
 		    <td>{{ art_change.attribution }}</td>
 		    <td>{{ art_change.roomTitle }}</td>
 		    <td>{{ art_change.Status }}</td>
-		    <td>{{ art_change.date.change }}</td>
+		    <td>{{ art_change.datechange }}</td>
 		  </tr>
 		{% endfor %}
 	</tbody>
