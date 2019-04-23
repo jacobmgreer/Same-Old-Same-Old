@@ -21,6 +21,7 @@ layout: default
 		    <td>{{ art_change.attribution }}</td>
 		    <td>{{ art_change.roomTitle }}</td>
 		    <td>{{ art_change.Status }}</td>
+		    <td>{{ art_change.date.change }}</td>
 		  </tr>
 		{% endfor %}
 	</tbody>
