@@ -11,7 +11,7 @@ layout: default
 	      <th scope="col">Attribution</th>
 	      <th scope="col">Location</th>
 	      <th scope="col">Update</th>
-	      <th scope="col">Date Changed</th>
+	      <th scope="col">Changed</th>
 	    </tr>
   	</thead>
   	<tbody>
