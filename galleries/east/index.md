@@ -4,7 +4,7 @@ roomTitle: "East Building"
 
 <table
   data-toggle="table"
-  data-url="art_change.json"
+  data-url="../../art_change.json"
   data-pagination="true"
   data-search="true">
 	<thead>
