@@ -1,2 +1,23 @@
 name: Same Old Same Old
 description: What has changed since Jacob's last visit to the National Gallery of Art?
+
+collections:
+  galleries:
+    east: 
+      order:
+        - index.md
+    west: 
+      order:
+        - index.md
+
+defaults:
+  - scope:
+      path: "/east"
+    values:
+      layout: "default"
+      title: "East Gallery"
+  - scope:
+      path: "/west"
+    values:
+      layout: "default"
+      title: "East Gallery"
