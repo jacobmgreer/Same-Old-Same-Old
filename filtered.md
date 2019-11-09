@@ -15,8 +15,7 @@ layout: default
 	    </tr>
   	</thead>
   	<tbody>
-  		{% assign art = site.data.art_change[site.data.art_change.Location = "West Building, Ground Floor - Gallery 3"] %}
-		{% for art_change in art %}
+		{% for art_change in site.data.art_change | where "Location", "West Building, Ground Floor - Gallery 3" %}
 		  <tr>
 		  	<td height="100"><img src="{{ art_change.imagepath }}" width="50" style="display: none" onload="this.style.display=''"/></td>
 		    <td><a href="https://www.nga.gov{{ art_change.url }}">{{ art_change.title }}</a></td>
