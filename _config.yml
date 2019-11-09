@@ -4,7 +4,7 @@ description: What has changed since Jacob's last visit to the National Gallery o
 defaults:
   -
     scope:
-      path: "/galleries/*"
+      path: "galleries/*/index.html"
       type: "pages"
     values:
       layout: "gallery"
