@@ -1,6 +1,7 @@
 ---
 title: Same Old Same Old | Filtered
 layout: default
+roomTitle: "West Building"
 ---
 
 <table class="table">
@@ -15,7 +16,11 @@ layout: default
 	    </tr>
   	</thead>
   	<tbody>
-  		{% assign art = site.data.art_change | where_exp: "item", "item.roomTitle contains 'West Building'" | where: "Status", "Added" %}
+  		{%  
+			assign art = site.data.art_change | 
+			where_exp: "item", "item.roomTitle contains page.roomTitle" | 
+			where: "Status", "Added" 
+  		%}
 		{% for art_change in art %}
 		  <tr>
 		  	<td height="100"><img src="{{ art_change.imagepath }}" width="50" style="display: none" onload="this.style.display=''"/></td>
