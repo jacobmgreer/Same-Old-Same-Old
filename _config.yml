@@ -1,2 +1,9 @@
 name: Same Old Same Old
 description: What has changed since Jacob's last visit to the National Gallery of Art?
+
+defaults:
+  -
+    scope:
+      path: "gallery/*/filtered.md"
+    values:
+      layout: "default"
