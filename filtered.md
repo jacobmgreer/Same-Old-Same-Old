@@ -1,5 +1,7 @@
 ---
 title: Same Old Same Old | Filtered
+path: gallery/*/filtered.md
+layout: default
 ---
 
 <table class="table">
