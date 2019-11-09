@@ -15,7 +15,7 @@ layout: default
 	    </tr>
   	</thead>
   	<tbody>
-  		{% assign art = site.data.art_change | where_exp: "art_change", "art_change.roomTitle == 'West Building, Ground Floor - Gallery 3' and art_change.Status == 'Added'" %}
+  		{% assign art = site.data.art_change | where_exp: "art_change", "art_change.roomTitle contains 'West Building' and art_change.Status == 'Added'" %}
 		{% for art_change in art %}
 		  <tr>
 		  	<td height="100"><img src="{{ art_change.imagepath }}" width="50" style="display: none" onload="this.style.display=''"/></td>
