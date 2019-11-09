@@ -1,6 +1,5 @@
 ---
 title: Same Old Same Old | Filtered
-path: gallery/:Path
 layout: default
 ---
 
