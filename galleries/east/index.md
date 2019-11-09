@@ -3,6 +3,7 @@ roomTitle: "East Building"
 ---
 
 <table
+  id="arttable"
   data-toggle="table"
   data-url="https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json"
   data-pagination="true"
