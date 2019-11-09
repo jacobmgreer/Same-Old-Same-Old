@@ -4,4 +4,4 @@ description: What has changed since Jacob's last visit to the National Gallery o
 collections:
   gallery:
     output: true
-    permalink: /gallery/:gallery
+    permalink: /:gallery
