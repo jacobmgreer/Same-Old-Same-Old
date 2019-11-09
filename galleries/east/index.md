@@ -2,7 +2,7 @@
 roomTitle: "East Building"
 ---
 
-<table id="table" class="table" data-filter-control="true">
+<table data-toggle="bootstrap-table" class="table" data-filter-control="true">
 	<thead>
 	    <tr>
 	      <th data-field="Image" scope="col">Image</th>
