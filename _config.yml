@@ -12,12 +12,12 @@ collections:
 
 defaults:
   - scope:
-      path: "/east"
+      path: "/galleries/east"
     values:
       layout: "default"
       title: "East Gallery"
   - scope:
-      path: "/west"
+      path: "/galleries/west"
     values:
       layout: "default"
-      title: "East Gallery"
+      title: "West Gallery"
