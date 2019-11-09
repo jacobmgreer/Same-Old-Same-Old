@@ -2,15 +2,15 @@
 roomTitle: "East Building"
 ---
 
-<table class="table">
+<table id="table" class="table" data-filter-control="true">
 	<thead>
 	    <tr>
-	      <th scope="col">Image</th>
-	      <th scope="col">Artwork Title</th>
-	      <th scope="col">Attribution</th>
-	      <th scope="col">Location</th>
-	      <th scope="col">Update</th>
-	      <th scope="col">Changed</th>
+	      <th data-field="Image" scope="col">Image</th>
+	      <th data-field="Artwork Title" scope="col">Artwork Title</th>
+	      <th data-field="Attribution" scope="col" data-filter-control="input">Attribution</th>
+	      <th data-field="Location" scope="col" data-filter-control="select">Location</th>
+	      <th data-field="Update" scope="col" data-filter-control="select">Update</th>
+	      <th data-field="Changed" scope="col">Changed</th>
 	    </tr>
   	</thead>
   	<tbody>
