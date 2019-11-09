@@ -5,7 +5,9 @@ roomTitle: "East Building"
 <table
   id="arttable"
   data-toggle="table"
-  data-url="https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json">
+  data-url="https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json"
+  data-filter-control="true"
+  data-show-search-clear-button="true">
 	<thead>
 		<tr>
 			<th data-field="title">Artwork Title</th>
