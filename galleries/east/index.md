@@ -10,7 +10,7 @@ title: "East Building"
 	      <th scope="col"></th>
 	      <th scope="col">Artwork Title</th>
 	      <th scope="col">Attribution</th>
-	      <th scope="col" width="200">Room</th>
+	      <th scope="col" style="width:300px">Room</th>
 	    </tr>
   	</thead>
   	<tbody></tbody>
