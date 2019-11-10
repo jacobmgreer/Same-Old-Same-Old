@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 			for (month in month_name) {
 				$("#month-menu").append(
-					"<li><a class=\"dropdown-item\" data-month=\"" + month_name[month] + "\" data-year=\"" + month_name[year] +  "\" href=\"#\">" + month_name[month] + " " + month_name[year] + "</a></li>");}
+					"<li><a class=\"dropdown-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>");}
 			for (record in data) {
 				$("#artTable tbody").append(
 					"<tr> \
