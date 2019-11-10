@@ -2,7 +2,7 @@
 roomTitle: "East Building"
 ---
 
-<div class="table">
+<table id="artTable">
 	<thead>
 	    <tr>
 	      <th scope="col">Image</th>
@@ -13,20 +13,20 @@ roomTitle: "East Building"
 	      <th scope="col">Changed</th>
 	    </tr>
   	</thead>
-  	<tbody id="artTable"></tbody>
-</div>
+  	<tbody></tbody>
+</table>
 
 <script>
 $(document).ready(function(){
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
 		function(data) {for (record in data) {
-			$("#artTable").append(
-				"<tr>" +
-					"<td>" + data[record].imagepath + "</td>" +
-					"<td>" + data[record].title + "</td>" +
-					"<td>" + data[record].attribution + "</td>" +
-					"<td>" + data[record].roomTitle + "</td>" +
-					"<td>" + data[record].Status + "</td>" +
-					"<td>" + data[record].datechange + "</td>" +
-			    "</tr>");}})})
+			$("#artTable tbody").append(
+				"<tr> \
+				    <td>" + data[record].imagepath + "</td> \
+					<td>" + data[record].title + "</td> \
+					<td>" + data[record].attribution + "</td> \
+					<td>" + data[record].roomTitle + "</td> \
+					<td>" + data[record].Status + "</td> \
+					<td>" + data[record].datechange + "</td> \
+			    </tr>");}})})
 </script>
