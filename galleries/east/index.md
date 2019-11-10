@@ -57,10 +57,10 @@ $(document).ready(function(){
 feather.replace();
 
 $('.month-item').click(function(e){
-	var clickmonth = $(e.relatedTarget).data('month');
+	$("#artTable tbody").empty();
+	var clickmonth = $(relatedTarget).data('month');
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
 		function(data) {
-			$("#artTable tbody").empty();
 
 });});
 
