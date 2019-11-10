@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 			for (month in month_name) {
 				$("#month-menu").append(
-					"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>");}
+					"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>")}
 			for (record in data) {
 				$("#artTable tbody").append(
 					"<tr> \
@@ -53,19 +53,25 @@ $(document).ready(function(){
 						<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
 						<td>" + data[record].attribution + "</td> \
 						<td>" + data[record].roomTitle + "</td> \
-				    </tr>");}})});
-feather.replace();
+				    </tr>")}})})
 
 $('.month-item').click(function(){
-	$("#artTable tbody").empty();
 	var clickmonth = $(relatedTarget).data('month');
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
-		function(data) {
+		function(json) {
+    		var data2=$(json).filter(function (i,n){return n.month==="August"});
+			for (var i in data2) {
+						$("#artTable tbody").append(
+							"<tr> \
+								<td>" + (data2[i].Status == "Added" ? "+" : "-") + "</td> \
+							    <td height=\"100\"> \
+							    	<img src=\"" + data2[i].imagepath + "\" onload=\"this.style.display=''\"/></td> \
+								<td><a href=\"https://www.nga.gov" + data2[i].url + "\">" + data2[i].title + "</a></td> \
+								<td>" + data2[i].attribution + "</td> \
+								<td>" + data2[i].roomTitle + "</td> \
+						    </tr>")}})})
 
-});});
-
-
-
+feather.replace();
 
 // <td class=\"text-dark\"><span data-feather=\"" + (data[record].Status == "Added" ? "plus-circle" : "minus-circle") + "\"></span> status</td> \
 </script>
