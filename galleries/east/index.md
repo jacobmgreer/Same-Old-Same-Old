@@ -19,6 +19,11 @@ title: "East Building"
 
 <style>
 #artTable tbody td img {width:50px; dispay:none;}
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
 </style>
 
 
