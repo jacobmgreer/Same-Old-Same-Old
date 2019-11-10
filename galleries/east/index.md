@@ -59,7 +59,7 @@ feather.replace();
 $('.month-item').click(function(e){
 	var clickmonth = $(e.relatedTarget).data('month');
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
-		function(data.filter(function (i,n){return n.month===clickmonth})) {
+		function(data) {
 			$("#artTable tbody").empty();
 
 });});
