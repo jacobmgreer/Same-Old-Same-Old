@@ -22,6 +22,7 @@ roomTitle: "East Building"
 
 <script>
 $(document).ready(function(){
+	feather.replace();
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
 		function(data) {for (record in data) {
 			$("#artTable tbody").append(
