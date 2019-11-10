@@ -49,7 +49,7 @@ $.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json',
 $(document).ready(function(){
     $('.month-item').each(function () {
         $(this).on("click", function () {
-        	$("#artTable tbody").emtpy();
+        	$("#artTable tbody").empty();
         	var clickmonth = $(this).data("month");
           $.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', function(data3) {
           var data2 = data3.filter(element => element.month === clickmonth);
