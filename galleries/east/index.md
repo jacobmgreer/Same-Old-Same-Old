@@ -51,7 +51,7 @@ $(document).ready(function(){
 				"<tr> \
 					<td>" + (data3[record].Status == "Added" ? "+" : "-") + "</td> \
 				    <td height=\"100\"> \
-				    	<img src=\"" + data3[record].imagepath + "\"  onerror=\"this.style.display='none'\" onload=\"this.style.display=''\"/></td> \
+				    	<img src=\"" + data3[record].imagepath + "\" width=\"50\" style=\"display: none\" onerror=\"this.style.display='none'\" onload=\"this.style.display=''\"/></td> \
 					<td><a href=\"https://www.nga.gov" + data3[record].url + "\">" + data3[record].title + "</a></td> \
 					<td>" + data3[record].attribution + "</td> \
 					<td>" + data3[record].roomTitle + "</td> \
@@ -66,7 +66,7 @@ $(document).ready(function(){
               "<tr> \
                 <td>" + (data2[i].Status == "Added" ? "+" : "-") + "</td> \
                 <td height=\"100\"> \
-                <img src=\"" + data2[i].imagepath + "\"  onerror=\"this.style.display='none'\" onload=\"this.style.display=''\"/></td> \
+                <img src=\"" + data2[i].imagepath + "\" width=\"50\" style=\"display: none\" onerror=\"this.style.display='none'\" onload=\"this.style.display=''\"/></td> \
                 <td><a href=\"https://www.nga.gov" + data2[i].url + "\">" + data2[i].title + "</a></td> \
                 <td>" + data2[i].attribution + "</td> \
                 <td>" + data2[i].roomTitle + "</td> \
