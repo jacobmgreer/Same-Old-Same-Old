@@ -25,6 +25,9 @@ title: "East Building"
 
 
 <script>
+$('#monthdrop #dropdownMenuButton').click(function(){
+	$('#monthdrop .dropdown-menu').toggleClass('show');
+});
 
 $(document).ready(function(){
 	feather.replace();
