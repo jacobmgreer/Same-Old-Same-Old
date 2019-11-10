@@ -6,12 +6,11 @@ title: "East Building"
 <table id="artTable" class="table">
 	<thead>
 	    <tr>
-	      <th scope="col"></th>
-	      <th scope="col"></th>
-	      <th scope="col">Artwork Title</th>
-	      <th scope="col">Attribution</th>
-	      <th scope="col">Location</th>
-	      <th scope="col">Changed</th>
+	      <th scope="col" class="col1"></th>
+	      <th scope="col" class="col1"></th>
+	      <th scope="col" class="col3">Artwork Title</th>
+	      <th scope="col" class="col3">Attribution</th>
+	      <th scope="col" class="col4">Location</th>
 	    </tr>
   	</thead>
   	<tbody></tbody>
