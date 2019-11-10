@@ -59,9 +59,9 @@ feather.replace();
 $('.month-item').click(function(e){
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
 		function(data) {
-			var data=$(data).filter(function (i,n){return n.month===$(e.relatedTarget).data('month')});
+			var data2=$(data).filter(function (i,n){return n.month===$(e.relatedTarget).data('month')});
 			$("#artTable tbody").empty();
-			for (record in data) {
+			for (record in data2) {
 				$("#artTable tbody").append(
 					"<tr> \
 						<td>" + (data[record].Status == "Added" ? "+" : "-") + "</td> \
