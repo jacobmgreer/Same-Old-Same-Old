@@ -1,5 +1,6 @@
 ---
 roomTitle: "East Building"
+title: "East Building"
 ---
 
 <table id="artTable" class="table">
