@@ -58,7 +58,7 @@ $(document).ready(function(){
               "<tr> \
                 <td>" + (data2[i].Status == "Added" ? "+" : "-") + "</td> \
                 <td height=\"100\"> \
-                <img src=\"" + data2[i].imagepath + "\" onload=\"this.style.display=''\"/></td> \
+                <img src=\"" + data2[i].imagepath + "\"  onerror=\"this.style.display='none'\" onload=\"this.style.display=''\"/></td> \
                 <td><a href=\"https://www.nga.gov" + data2[i].url + "\">" + data2[i].title + "</a></td> \
                 <td>" + data2[i].attribution + "</td> \
                 <td>" + data2[i].roomTitle + "</td> \
