@@ -30,9 +30,9 @@ title: "East Building"
 
 
 <script>
-/// $('#monthdrop').click(function(){
-///	$('#monthdrop .dropdown-menu').toggleClass('show');
-/// });
+//$('#monthdrop').click(function(){
+//	$('#monthdrop .dropdown-menu').toggleClass('show');
+//});
 
 $(document).ready(function(){
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
