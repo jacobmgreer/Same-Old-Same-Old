@@ -32,8 +32,8 @@ $(document).ready(function(){
 		function(data) {
 			var month_name = [];
 			data.forEach(function(obj) {
-				if(month_name.indexOf(obj.datechange) == -1)
-				   month_name.push(obj.datechange);
+				if(month_name.indexOf(obj.month) == -1)
+				   month_name.push(obj.month);
 				var lastIndex = month_name.length - 1;
 			});
 
