@@ -61,17 +61,8 @@ $('.month-item').click(function(e){
 		function(data) {
 			var data2=$(data).filter(function (i,n){return n.month===$(e.relatedTarget).data('month')});
 			$("#artTable tbody").empty();
-			for (record in data2) {
-				$("#artTable tbody").append(
-					"<tr> \
-						<td>" + (data[record].Status == "Added" ? "+" : "-") + "</td> \
-					    <td height=\"100\"> \
-					    	<img src=\"" + data[record].imagepath + "\" onload=\"this.style.display=''\"/></td> \
-						<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
-						<td>" + data[record].attribution + "</td> \
-						<td>" + data[record].roomTitle + "</td> \
-				    </tr>");}})
-});
+
+});});
 
 
 
