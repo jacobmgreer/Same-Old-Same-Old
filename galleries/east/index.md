@@ -46,20 +46,23 @@ $.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json',
 				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>")}})
 
 
-$('.month-item').click(function(){
-	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
-		function(json) {
-    		var data2=$(json).filter(function (i,n){return n.month==="August"});
-			for (var i in data2) {
-						$("#artTable tbody").append(
-							"<tr> \
-								<td>" + (data2[i].Status == "Added" ? "+" : "-") + "</td> \
-							    <td height=\"100\"> \
-							    	<img src=\"" + data2[i].imagepath + "\" onload=\"this.style.display=''\"/></td> \
-								<td><a href=\"https://www.nga.gov" + data2[i].url + "\">" + data2[i].title + "</a></td> \
-								<td>" + data2[i].attribution + "</td> \
-								<td>" + data2[i].roomTitle + "</td> \
-						    </tr>")}})})
+$(document).ready(function(){
+    $('.month-item').each(function () {
+        $(this).on("click", function () {
+        	var clickmonth = $(this).data("month");
+          $.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', function(data3) {
+          var data2 = data3.filter(element => element.month === clickmonth);
+          for (var i in data2) {
+            $("#artTable tbody").append(
+              "<tr> \
+                <td>" + (data2[i].Status == "Added" ? "+" : "-") + "</td> \
+                <td height=\"100\"> \
+                <img src=\"" + data2[i].imagepath + "\" onload=\"this.style.display=''\"/></td> \
+                <td><a href=\"https://www.nga.gov" + data2[i].url + "\">" + data2[i].title + "</a></td> \
+                <td>" + data2[i].attribution + "</td> \
+                <td>" + data2[i].roomTitle + "</td> \
+              </tr>"
+)}})})})})
 
 feather.replace();
 
