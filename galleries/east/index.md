@@ -30,9 +30,9 @@ title: "East Building"
 
 
 <script>
-$('#monthdrop #dropdownMenuButton').click(function(){
-	$('#monthdrop .dropdown-menu').toggleClass('show');
-});
+/// $('#monthdrop').click(function(){
+///	$('#monthdrop .dropdown-menu').toggleClass('show');
+/// });
 
 $(document).ready(function(){
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
@@ -55,7 +55,7 @@ $(document).ready(function(){
 						<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
 						<td>" + data[record].attribution + "</td> \
 						<td>" + data[record].roomTitle + "</td> \
-						<td><span data-feather=\"" + (data[record].Status == "Added" ? "plus-circle" : "minus-circle") + "\"></span> status</td> \
+						<td class=\"text-dark\"><span data-feather=\"" + (data[record].Status == "Added" ? "plus-circle" : "minus-circle") + "\"></span> status</td> \
 						<td>" + data[record].datechange + "</td> \
 				    </tr>");}})})
 feather.replace();
