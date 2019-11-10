@@ -2,26 +2,31 @@
 roomTitle: "East Building"
 ---
 
-<table
-  ref="artTable"
-  id="artTable"
-  class="table table-striped table-bordered table-hover" 
-  cellSpacing="0"
-  data-url="../../art_change.json"
-  data-show-toggle="true" 
-  data-filter-control="true"
-  data-pagination="true"
-  data-search="true"
-  data-show-search-clear-button="true">
+<div class="table">
 	<thead>
-		<tr>
-			<th data-field="title">Artwork Title</th>
-			<th data-field="Status" data-filter-control="select">Update</th>
-		</tr>
-	</thead>
-</table>
+	    <tr>
+	      <th scope="col">Image</th>
+	      <th scope="col">Artwork Title</th>
+	      <th scope="col">Attribution</th>
+	      <th scope="col">Location</th>
+	      <th scope="col">Update</th>
+	      <th scope="col">Changed</th>
+	    </tr>
+  	</thead>
+  	<tbody id="artTable"></tbody>
+</div>
 
- <script>
-    var $table = $('#artTable');
-    $table.bootstrapTable();
-  </script>
+<script>
+$(document).ready(function(){
+	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
+		function(data) {for (record in data) {
+			$("#artTable").append(
+				"<tr>" +
+					"<td>" + data[record].imagepath + "</td>" +
+					"<td>" + data[record].title + "</td>" +
+					"<td>" + data[record].attribution + "</td>" +
+					"<td>" + data[record].roomTitle + "</td>" +
+					"<td>" + data[record].Status + "</td>" +
+					"<td>" + data[record].datechange + "</td>" +
+			    "</tr>");}})})
+</script>
