@@ -52,13 +52,12 @@ $(document).ready(function(){
 					<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
 					<td>" + data[record].attribution + "</td> \
 					<td>" + data[record].roomTitle + "</td> \
-			    </tr>")}})
+			    </tr>")}
     $('.month-item').each(function () {
         $(this).on("click", function () {
         	$("#artTable tbody").empty();
         	var clickmonth = $(this).data("month");
-          $.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', function(data3) {
-          var data2 = data3.filter(element => element.month === clickmonth);
+          var data2 = data.filter(element => element.month === clickmonth);
           for (var i in data2) {
             $("#artTable tbody").append(
               "<tr> \
