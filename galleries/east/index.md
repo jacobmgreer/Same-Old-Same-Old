@@ -10,8 +10,6 @@ roomTitle: "East Building"
 	<thead>
 		<tr>
 			<th data-field="title">Artwork Title</th>
-			<th data-field="attribution" data-filter-control="input">Attribution</th>
-			<th data-field="roomTitle" data-filter-control="select">Location</th>
 			<th data-field="Status" data-filter-control="select">Update</th>
 		</tr>
 	</thead>
