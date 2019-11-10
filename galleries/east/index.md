@@ -32,6 +32,19 @@ title: "East Building"
 // $('#month-menu-button').click(function(){$('#month-menu').toggleClass('show');});
 
 
+$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
+	function(data) {
+		var month_name = [];
+		data.forEach(function(obj) {
+			if(month_name.indexOf(obj.month) == -1)
+			   month_name.push(obj.month);
+			var lastIndex = month_name.length - 1;
+		});
+
+		for (month in month_name) {
+			$("#month-menu").append(
+				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>")}})
+
 
 $('.month-item').click(function(){
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
