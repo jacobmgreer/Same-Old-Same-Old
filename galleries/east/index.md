@@ -56,7 +56,6 @@ $(document).ready(function(){
 				    </tr>")}})})
 
 $('.month-item').click(function(){
-	var clickmonth = $(relatedTarget).data('month');
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
 		function(json) {
     		var data2=$(json).filter(function (i,n){return n.month==="August"});
