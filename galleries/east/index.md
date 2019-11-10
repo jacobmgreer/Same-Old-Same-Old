@@ -2,7 +2,7 @@
 roomTitle: "East Building"
 ---
 
-<table id="artTable">
+<table id="artTable" class="table">
 	<thead>
 	    <tr>
 	      <th scope="col">Image</th>
