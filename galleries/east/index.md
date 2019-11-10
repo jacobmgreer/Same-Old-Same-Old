@@ -3,14 +3,14 @@ roomTitle: "East Building"
 title: "East Building"
 ---
 
-<table id="artTable" class="table">
+<table id="artTable" class="table table-hover table-responsive">
 	<thead>
 	    <tr>
-	      <th scope="col" class="col-1"></th>
-	      <th scope="col" class="col-1"></th>
-	      <th scope="col" class="col-3">Artwork Title</th>
-	      <th scope="col" class="col-3">Attribution</th>
-	      <th scope="col" class="col-4">Location</th>
+	      <th scope="col"></th>
+	      <th scope="col"></th>
+	      <th scope="col">Artwork Title</th>
+	      <th scope="col">Attribution</th>
+	      <th scope="col">Location</th>
 	    </tr>
   	</thead>
   	<tbody></tbody>
