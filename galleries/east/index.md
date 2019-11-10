@@ -30,7 +30,6 @@ $('#monthdrop #dropdownMenuButton').click(function(){
 });
 
 $(document).ready(function(){
-	feather.replace();
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
 		function(data) {
 			var month_name = [];
@@ -51,8 +50,9 @@ $(document).ready(function(){
 						<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
 						<td>" + data[record].attribution + "</td> \
 						<td>" + data[record].roomTitle + "</td> \
-						<td><span data-feather=\"" + (data[record].Status == "Added" ? "plus" : "minus") + "\"></span></td> \
+						<td><span data-feather=\"" + (data[record].Status == "Added" ? "plus-circle" : "minus-circle") + "\"></span></td> \
 						<td>" + data[record].datechange + "</td> \
-				    </tr>");}})})
+				    </tr>");}})
+	feather.replace();})
 
 </script>
