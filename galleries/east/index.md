@@ -21,19 +21,35 @@ title: "East Building"
 #artTable tbody td img {width:50px; dispay:none;}
 </style>
 
+
+
+
 <script>
+
 $(document).ready(function(){
 	feather.replace();
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
-		function(data) {for (record in data) {
-			$("#artTable tbody").append(
-				"<tr> \
-				    <td height=\"100\"> \
-				    	<img src=\"" + data[record].imagepath + "\" onload=\"this.style.display=''\"/></td> \
-					<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
-					<td>" + data[record].attribution + "</td> \
-					<td>" + data[record].roomTitle + "</td> \
-					<td>" + data[record].Status + "</td> \
-					<td>" + data[record].datechange + "</td> \
-			    </tr>");}})})
+		function(data) {
+			var month_name = [];
+			data.forEach(function(obj) {
+				if(month_name.indexOf(obj.datechange) == -1)
+				   month_name.push(obj.datechange);
+				var lastIndex = month_name.length - 1;
+			});
+
+			for (month in month_name) {
+				$("#monthdrop").append(
+					"<a href=\"#\">" + month_name[month_name] + "</a>");}})
+			for (record in data) {
+				$("#artTable tbody").append(
+					"<tr> \
+					    <td height=\"100\"> \
+					    	<img src=\"" + data[record].imagepath + "\" onload=\"this.style.display=''\"/></td> \
+						<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
+						<td>" + data[record].attribution + "</td> \
+						<td>" + data[record].roomTitle + "</td> \
+						<td>" + data[record].Status + "</td> \
+						<td>" + data[record].datechange + "</td> \
+				    </tr>");}})
+
 </script>

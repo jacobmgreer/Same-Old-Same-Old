@@ -6,6 +6,7 @@
     <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/jquery.min.js"></script>
     <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://underscorejs.org/underscore-min.js"></script>
   </head>
 
   <body>
@@ -57,10 +58,13 @@
             <button type="button" class="btn btn-sm btn-outline-secondary">Added</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Removed</button>
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar"></span>
-            Month
-          </button>
+          <div class="btn-group" id="monthdrop">
+            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+              <span data-feather="calendar"></span>
+              Month
+            </button>
+            <div class="dropdown-menu"></div>
+          </div>
         </div>
       </div>
 
