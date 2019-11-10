@@ -34,25 +34,27 @@ title: "East Building"
 $(document).ready(function(){
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', function(data) {
 		var month_name = [];
+		var data3 = data.slice(0, 25);
+
 		data.forEach(function(obj) {
 			if(month_name.indexOf(obj.month) == -1)
 			   month_name.push(obj.month);
 			var lastIndex = month_name.length - 1;
 		});
-
 		for (month in month_name) {
 			$("#month-menu").append(
 				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>")}
-		var data3 = data.slice(0, 25);;
-		for (record in data) {
+
+
+		for (record in data3) {
 			$("#artTable tbody").append(
 				"<tr> \
-					<td>" + (data[record].Status == "Added" ? "+" : "-") + "</td> \
+					<td>" + (data3[record].Status == "Added" ? "+" : "-") + "</td> \
 				    <td height=\"100\"> \
-				    	<img src=\"" + data[record].imagepath + "\"  onerror=\"this.style.display='none'\" onload=\"this.style.display=''\"/></td> \
-					<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
-					<td>" + data[record].attribution + "</td> \
-					<td>" + data[record].roomTitle + "</td> \
+				    	<img src=\"" + data3[record].imagepath + "\"  onerror=\"this.style.display='none'\" onload=\"this.style.display=''\"/></td> \
+					<td><a href=\"https://www.nga.gov" + data3[record].url + "\">" + data3[record].title + "</a></td> \
+					<td>" + data3[record].attribution + "</td> \
+					<td>" + data3[record].roomTitle + "</td> \
 			    </tr>")}
     $('.month-item').each(function () {
         $(this).on("click", function () {
