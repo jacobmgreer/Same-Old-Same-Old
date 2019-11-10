@@ -33,7 +33,7 @@ title: "East Building"
 
 
 
-$('.month-item').click(function(){s
+$('.month-item').click(function(){
 	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
 		function(json) {
     		var data2=$(json).filter(function (i,n){return n.month==="August"});
