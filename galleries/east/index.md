@@ -55,8 +55,9 @@ $(document).ready(function(){
 						<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
 						<td>" + data[record].attribution + "</td> \
 						<td>" + data[record].roomTitle + "</td> \
-						<td class=\"text-dark\"><span data-feather=\"" + (data[record].Status == "Added" ? "plus-circle" : "minus-circle") + "\"></span> status</td> \
+						<td>" + (data[record].Status == "Added" ? "+" : "-") + "</td> \
 						<td>" + data[record].datechange + "</td> \
 				    </tr>");}})})
 feather.replace();
+// <td class=\"text-dark\"><span data-feather=\"" + (data[record].Status == "Added" ? "plus-circle" : "minus-circle") + "\"></span> status</td> \
 </script>
