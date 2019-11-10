@@ -6,9 +6,17 @@
     <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/jquery.min.js"></script>
     <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/popper.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://underscorejs.org/underscore-min.js"></script>
+
+<style>
+document.addEventListener("DOMContentLoaded", function(event) {
+   document.querySelectorAll('img').forEach(function(img){
+    img.onerror = function(){this.style.display='none';};
+   })
+});
+</style>
+
   </head>
 
   <body>
