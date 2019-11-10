@@ -51,7 +51,7 @@ $(document).ready(function(){
 						<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
 						<td>" + data[record].attribution + "</td> \
 						<td>" + data[record].roomTitle + "</td> \
-						<td>" + if (data[record].Status == "Added") { + "<span data-feather=\"plus\"></span>" + } + "</td> \
+						<td><span data-feather=\"" + (data[record].Status == "Added" ? "plus" : "minus") + "\"></span></td> \
 						<td>" + data[record].datechange + "</td> \
 				    </tr>");}})})
 
