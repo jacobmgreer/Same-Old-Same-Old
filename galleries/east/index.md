@@ -43,12 +43,13 @@ $(document).ready(function(){
 		for (month in month_name) {
 			$("#month-menu").append(
 				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>")}
+		var data3 = data.slice(0, 25);;
 		for (record in data) {
 			$("#artTable tbody").append(
 				"<tr> \
 					<td>" + (data[record].Status == "Added" ? "+" : "-") + "</td> \
 				    <td height=\"100\"> \
-				    	<img src=\"" + data[record].imagepath + "\" onload=\"this.style.display=''\"/></td> \
+				    	<img src=\"" + data[record].imagepath + "\"  onerror=\"this.style.display='none'\" onload=\"this.style.display=''\"/></td> \
 					<td><a href=\"https://www.nga.gov" + data[record].url + "\">" + data[record].title + "</a></td> \
 					<td>" + data[record].attribution + "</td> \
 					<td>" + data[record].roomTitle + "</td> \
