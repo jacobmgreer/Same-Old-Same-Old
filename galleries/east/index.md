@@ -31,9 +31,8 @@ title: "East Building"
 <script>
 // $('#month-menu-button').click(function(){$('#month-menu').toggleClass('show');});
 
-
-$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', 
-	function(data) {
+$(document).ready(function(){
+	$.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json', function(data) {
 		var month_name = [];
 		data.forEach(function(obj) {
 			if(month_name.indexOf(obj.month) == -1)
@@ -44,9 +43,6 @@ $.getJSON('https://jacobmgreer.github.io/Same-Old-Same-Old/art_change.json',
 		for (month in month_name) {
 			$("#month-menu").append(
 				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>")}})
-
-
-$(document).ready(function(){
     $('.month-item').each(function () {
         $(this).on("click", function () {
         	$("#artTable tbody").empty();
