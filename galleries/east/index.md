@@ -20,3 +20,8 @@ roomTitle: "East Building"
 		</tr>
 	</thead>
 </table>
+
+ <script>
+    var $table = $('#artTable');
+    $table.bootstrapTable();
+  </script>
