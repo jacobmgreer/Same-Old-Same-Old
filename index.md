@@ -43,7 +43,7 @@ $(document).ready(function(){
 		});
 		for (month in month_name) {
 			$("#month-menu").append(
-				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>")}
+				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[monthyear] + "\" href=\"#\">" + month_name[monthyear] + "</a></li>")}
 
 
 		for (record in data3) {
