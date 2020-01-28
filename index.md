@@ -37,8 +37,8 @@ $(document).ready(function(){
 		var data3 = data.slice(0, 25);
 
 		data.forEach(function(obj) {
-			if(month_name.indexOf(obj.month) == -1)
-			   month_name.push(obj.month);
+			if(month_name.indexOf(obj.monthyear) == -1)
+			   month_name.push(obj.monthyear);
 			var lastIndex = month_name.length - 1;
 		});
 		for (month in month_name) {
