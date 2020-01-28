@@ -37,13 +37,13 @@ $(document).ready(function(){
 		var data3 = data.slice(0, 25);
 
 		data.forEach(function(obj) {
-			if(month_name.indexOf(obj.month) == -1)
-			   month_name.push(obj.month);
+			if(month_name.indexOf(obj.monthyear) == -1)
+			   month_name.push(obj.monthyear);
 			var lastIndex = month_name.length - 1;
 		});
-		for (month in month_name) {
+		for (monthyear in month_name) {
 			$("#month-menu").append(
-				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[month] + "\" href=\"#\">" + month_name[month] + "</a></li>")}
+				"<li><a class=\"dropdown-item month-item\" data-month=\"" + month_name[monthyear] + "\" href=\"#\">" + month_name[monthyear] + "</a></li>")}
 
 
 		for (record in data3) {
@@ -59,8 +59,8 @@ $(document).ready(function(){
     $('.month-item').each(function () {
         $(this).on("click", function () {
         	$("#artTable tbody").empty();
-        	var clickmonth = $(this).data("month");
-          var data2 = data.filter(element => element.month === clickmonth);
+        	var clickmonth = $(this).data("monthyear");
+          var data2 = data.filter(element => element.monthyear === clickmonth);
           for (var i in data2) {
             $("#artTable tbody").append(
               "<tr> \
