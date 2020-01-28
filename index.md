@@ -59,7 +59,7 @@ $(document).ready(function(){
     $('.month-item').each(function () {
         $(this).on("click", function () {
         	$("#artTable tbody").empty();
-        	var clickmonth = $(this).data("monthyear");
+        	var clickmonth = $(this).data("month");
           var data2 = data.filter(element => element.monthyear === clickmonth);
           for (var i in data2) {
             $("#artTable tbody").append(
